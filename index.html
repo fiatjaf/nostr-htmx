@@ -1,7 +1,7 @@
 <script src="https://unpkg.com/htmx.org@1.9.6"></script>
 <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
 <script src="https://unpkg.com/mustache@latest"></script>
-<script src="/nostr-sub.js"></script>
+<script src="/dist/nostr-sub.js"></script>
 <script>
   htmx.on('htmx:nostr-sub-event', console.log)
 </script>
@@ -10,8 +10,9 @@
   hx-trigger="submit"
   hx-ext="nostr-sub, client-side-templates"
   mustache-template="event"
+  nostr-filter='{"kinds":[0]}'
 >
-  <input name="field" />
+  <input name="author" />
   <button>ok</button>
 </form>
 

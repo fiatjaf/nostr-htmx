@@ -1,32 +1,15 @@
 {
   "root": true,
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "sourceType": "module",
-    "allowImportExportEverywhere": false
-  },
-
+  "plugins": ["@typescript-eslint"],
   "env": {
-    "es6": true,
-    "node": true
+    "browser": true,
+    "es2021": true
   },
-
-  "globals": {
-    "document": false,
-    "navigator": false,
-    "window": false,
-    "location": false,
-    "URL": false,
-    "URLSearchParams": false,
-    "fetch": false,
-    "EventSource": false,
-    "localStorage": false,
-    "sessionStorage": false
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
   },
-
   "rules": {
     "accessor-pairs": 2,
     "arrow-spacing": [2, {"before": true, "after": true}],
